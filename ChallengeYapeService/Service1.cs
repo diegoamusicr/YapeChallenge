@@ -68,7 +68,7 @@ namespace ChallengeYapeService
                 inputFileStream.CopyTo(cryptoStream);
             }
             _logger.Debug($"Finished copying file {file} to {targetPath}, waiting an extra 15 seconds");
-            Task.Delay(15000);
+            Task.Delay(15000).Wait();
             _logger.Debug($"Finished processing file {file}");
         }
 
